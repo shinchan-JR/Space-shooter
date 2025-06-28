@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Space Hunter 🐱‍🏍</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <script src="function.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #000010, #000);
+      color: #00ffcc;
+      overflow: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 20, 0.7);
+      box-shadow: 0 0 20px #00ffcc44;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 120px);
+      /* padding: 20px; */
+    }
+    #board {
+      border: 3px solid #00ffcc;
+      border-radius: 10px;
+      box-shadow: 0 0 40px #00ffcc88;
+      background-color: black;
+      max-width: 100%;
+      height: auto;
+    }
+    .controls {
+      margin-top: 15px;
+      font-size: 1em;
+      color: #00ffccee;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      background: rgba(0, 0, 20, 0.7);
+      color: #00ffccaa;
+      box-shadow: 0 0 20px #00ffcc22;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    #play {
+      height: 50px;
+      width: 100px;
+      font-weight: 1000;
+      color: #000;
+      top: -10px;
+      border: 3px solid black;
+      background-color: #00ffcc;
+      border-radius: 10px;
+      box-shadow:0 0 20px #00ffcc;
+      margin-bottom: 1%;
+      position: relative;
+      justify-self: center;
+      align-items: center;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Space Hunter 🐱‍🏍</h1>
+  </header>
+  <main>
+    <button id="play" onclick="playgame()">Play</button>
+    <canvas id="board"></canvas>
+    <div class="controls">
+      Controls: ⬅️ ⬆️ ⬇️ ➡️ to move | ␣ Space to shoot | P to pause | R to restart
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Space Hunter Game. Ready to blast some aliens?
+  </footer>
+</body>
+</html>
